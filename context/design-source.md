@@ -1,29 +1,54 @@
-﻿# DESIGN SOURCE
+# DESIGN SOURCE
 
 ## Figma
 
-Archivo:
-https://www.figma.com/design/7vJdui1M9OMQwZ87cj1G5F/Nicolas-Paris-web?node-id=0-1&p=f&t=EoWNqXCevcxa1duU-0
+Archivo correcto:
+https://www.figma.com/design/ryixRWLxVtp1k7QQXehnrZ/Nicolas-Paris-web--Copy-?node-id=0-1&p=f&t=YSL397x9uOOEQhsc-0
 
-## Estado de acceso
+## Acceso
 
-Codex pudo autenticar la integracion Figma, pero las herramientas devolvieron
-`INVALID_ARGUMENT` al consultar el archivo y el nodo `0:1`.
+El archivo `Nicolas Paris web Copy` fue accesible desde Figma MCP.
 
-Cuenta autenticada:
-lucastrobo@gmail.com
+## Pagina
 
-## Para destrabar
+- `0:1`: Secciones
 
-- Confirmar que el archivo este compartido con `lucastrobo@gmail.com`.
-- Si el link apunta a la pagina raiz, copiar un link directo a un frame concreto.
-- Si el archivo esta en branch, pasar el link de branch correcto.
+## Frames principales
 
-## Checklist de auditoria cuando haya acceso
+- `28:474`: Home / Portfolio Work Page.
+- `34:408`: Sobre mi.
+- `34:155`: Detalle de proyecto.
+- `36:1113`: Mobile/parcial responsive.
 
-- Listar paginas y frames principales.
-- Capturar screenshot de cada pantalla clave.
-- Extraer tokens: color, tipografia, spacing, radios y sombras.
-- Identificar componentes repetidos.
-- Definir assets exportables.
-- Mapear cada frame contra rutas del sitio.
+## Textos visibles
+
+- DISEÑO MARCAS E IDENTIDADES VISUALES CON IMPACTO Y DIRECCIÓN
+- Trabajo junto a marcas y proyectos que buscan verse con claridad, diferenciarse y construir una presencia consistente.
+- Proyectos con impacto
+- Una mirada, tres etapas.
+- Entender
+- Definir
+- Activar
+- ¿Tenés un proyecto en mente?
+- Contame un poco sobre tu proyecto y coordinamos una primera charla.
+- nicolasparis.dg@gmail.com
+
+## Navegacion
+
+- PROYECTOS
+- COMO TRABAJO
+- SOBRE MI
+- CONTACTO
+
+## Estilo detectado
+
+- Base blanco y negro.
+- Color principal: `#181717`.
+- Fondo oscuro de contacto/footer: negro.
+- Tipografias detectadas: Freigeist, DM Sans, Satoshi.
+- Composicion editorial con grillas amplias y gran jerarquia tipografica.
+
+## Observaciones
+
+- En footer aparece `Linkeding`; corregir a `LinkedIn` en la implementacion.
+- La grilla de detalle de proyecto usa modulos de imagen con tamaños variables: normal, doble vertical, doble horizontal y bloque 2x2.

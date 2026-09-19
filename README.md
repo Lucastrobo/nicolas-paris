@@ -1,27 +1,33 @@
-﻿# Nicolas Paris web
+# Nicolas Paris web
 
-Documentacion inicial del proyecto Nicolas Paris web.
+Sitio portfolio y comercial para Nicolas Paris, diseñador grafico especializado en branding, creacion de marcas e identidad visual.
 
 ## Estado
 
-Proyecto nuevo, separado de `kusa-inmobiliaria`.
+Proyecto nuevo, independiente de `kusa-inmobiliaria`.
 
 ## Referencia principal
 
 Figma:
-https://www.figma.com/design/7vJdui1M9OMQwZ87cj1G5F/Nicolas-Paris-web?node-id=0-1&p=f&t=EoWNqXCevcxa1duU-0
+https://www.figma.com/design/ryixRWLxVtp1k7QQXehnrZ/Nicolas-Paris-web--Copy-?node-id=0-1&p=f&t=YSL397x9uOOEQhsc-0
+
+## Stack previsto
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Supabase
 
 ## Documentacion
 
-- `context/project-brief.md`: brief general del producto.
-- `context/product.md`: objetivo, audiencia, propuesta de valor y alcance.
-- `context/requirements.md`: requisitos iniciales funcionales, visuales y tecnicos.
-- `context/design-source.md`: estado de Figma y criterios para auditar el diseno.
-- `context/architecture.md`: arquitectura tentativa hasta definir stack final.
+- `context/master-prompt.md`: prompt maestro de construccion.
+- `context/project-brief.md`: brief general del proyecto.
+- `context/product.md`: producto, audiencia y objetivos.
+- `context/requirements.md`: requisitos funcionales, visuales y tecnicos.
+- `context/design-source.md`: lectura del Figma y nodos principales.
+- `context/architecture.md`: arquitectura prevista.
 - `context/implementation-plan.md`: fases sugeridas de trabajo.
 
-## Pendiente inmediato
+## Criterio central
 
-- Confirmar acceso al archivo de Figma desde Codex.
-- Auditar pantallas, componentes, estilos y assets.
-- Definir stack final y crear el proyecto base.
+La web debe replicar fielmente el Figma y mantener el foco en portfolio, branding e identidad visual. No usar contenido, estructura ni decisiones heredadas de proyectos inmobiliarios.
