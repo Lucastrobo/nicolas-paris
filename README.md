@@ -2,10 +2,6 @@
 
 Sitio portfolio y comercial para Nicolas Paris, diseñador grafico especializado en branding, creacion de marcas e identidad visual.
 
-## Estado
-
-Proyecto nuevo, independiente de `kusa-inmobiliaria`.
-
 ## Referencia principal
 
 Figma:
@@ -30,4 +26,4 @@ https://www.figma.com/design/ryixRWLxVtp1k7QQXehnrZ/Nicolas-Paris-web--Copy-?nod
 
 ## Criterio central
 
-La web debe replicar fielmente el Figma y mantener el foco en portfolio, branding e identidad visual. No usar contenido, estructura ni decisiones heredadas de proyectos inmobiliarios.
+La web debe replicar fielmente el Figma y mantener el foco en portfolio, branding e identidad visual.
