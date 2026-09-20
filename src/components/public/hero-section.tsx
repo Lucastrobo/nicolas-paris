@@ -8,20 +8,20 @@ type HeroContent = {
 
 export function HeroSection({ content }: { content: HeroContent }) {
   return (
-    <section className="relative min-h-[calc(100vh-158px)] overflow-hidden pb-[84px] pt-20 max-md:min-h-[640px] max-md:overflow-visible max-md:pb-14 max-md:pt-12">
+    <section className="relative min-h-[calc(100vh-158px)] overflow-hidden pb-[84px] pt-20 max-md:min-h-[clamp(760px,154vw,900px)] max-md:overflow-hidden max-md:pb-16 max-md:pt-12">
       <div className="marquee-bg" aria-hidden="true">
         <div className="marquee-track">
           <span>{marqueeText}</span>
           <span>{marqueeText}</span>
         </div>
       </div>
-      <div className="site-shell relative z-10 min-h-[506px] max-md:min-h-[482px]">
-        <h1 className="max-w-[928px] overflow-visible pb-2 pt-2 font-display text-[80px] leading-[1.08] tracking-[-0.01em] max-lg:text-[64px] max-md:text-[43px] max-md:leading-[1.14]">
+      <div className="site-shell relative z-10 min-h-[506px] max-md:min-h-[clamp(570px,122vw,700px)]">
+        <h1 className="max-w-[928px] overflow-visible pb-3 pt-3 font-display text-[80px] leading-[1.08] tracking-[-0.01em] max-lg:text-[64px] max-md:text-[clamp(38px,10.8vw,46px)] max-md:leading-[1.16]">
           <span className="font-light">{content.heroTitleLight}</span>{" "}
           <span className="font-black">{content.heroTitleStrong}</span>
         </h1>
         <p className="mt-20 max-w-[544px] text-2xl leading-[1.17] max-md:mt-12 max-md:text-xl">{content.heroSubtitle}</p>
-        <img src="/images/figma/asterisk.svg" alt="" className="spin-clockwise absolute right-0 top-[220px] size-20 max-md:right-6 max-md:top-[525px]" />
+        <img src="/images/figma/asterisk.svg" alt="" className="spin-clockwise absolute right-0 top-[220px] size-20 max-md:right-6 max-md:top-[clamp(605px,96vw,620px)]" />
       </div>
     </section>
   );

@@ -275,12 +275,13 @@ textarea {
   }
 
   .marquee-bg {
-    inset-block-start: 340px;
-    font-size: clamp(120px, 42vw, 190px);
+    inset-block-start: clamp(520px, 103vw, 640px);
+    font-size: clamp(118px, 40vw, 188px);
+    line-height: 1.12;
   }
 
   .marquee-track {
-    margin-top: 100px;
+    margin-top: 0;
   }
 
   .home-projects-grid {
