@@ -53,6 +53,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 106px;
+  overflow-x: hidden;
 }
 
 body {
@@ -60,6 +61,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -264,6 +266,11 @@ textarea {
   to { transform: translateX(-50%); }
 }
 
+@keyframes mobile-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-33.333%, 0, 0); }
+}
+
 @keyframes spin-clockwise {
   to { transform: rotate(360deg); }
 }
@@ -288,7 +295,7 @@ textarea {
     width: 100%;
     height: clamp(190px, 52vw, 240px);
     margin-inline: auto;
-    overflow: hidden;
+    overflow: visible;
     color: #f4f4f4;
     font-family: "Freigeist", Arial, sans-serif;
     font-size: clamp(118px, 40vw, 188px);
@@ -297,29 +304,20 @@ textarea {
     white-space: nowrap;
   }
 
-  .mobile-hero-marquee::before,
-  .mobile-hero-marquee::after {
-    content: "";
+  .mobile-marquee-window {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 9%;
-    pointer-events: none;
-  }
-
-  .mobile-hero-marquee::before {
-    left: 0;
-    background: linear-gradient(90deg, #ffffff 0%, transparent 100%);
-  }
-
-  .mobile-hero-marquee::after {
-    right: 0;
-    background: linear-gradient(90deg, transparent 0%, #ffffff 100%);
+    inset-block: 0;
+    left: 50%;
+    width: calc(100vw + 96px);
+    overflow: hidden;
+    transform: translateX(-50%);
   }
 
   .mobile-hero-marquee .marquee-track {
+    animation-name: mobile-marquee;
     padding-top: 0.16em;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
   }
 
   .mobile-hero-asterisk {

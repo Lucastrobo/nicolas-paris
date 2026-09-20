@@ -28,9 +28,12 @@ export function HeroSection({ content }: { content: HeroContent }) {
       </section>
 
       <div className="mobile-hero-marquee" aria-hidden="true">
-        <div className="marquee-track">
-          <span>{marqueeText}</span>
-          <span>{marqueeText}</span>
+        <div className="mobile-marquee-window">
+          <div className="marquee-track">
+            <span>{marqueeText}</span>
+            <span>{marqueeText}</span>
+            <span>{marqueeText}</span>
+          </div>
         </div>
         <img src="/images/figma/asterisk.svg" alt="" className="spin-clockwise mobile-hero-asterisk" />
       </div>
