@@ -18,7 +18,10 @@ export function SiteHeader() {
 
   useEffect(() => {
     function onScroll() {
-      setScrolled(window.scrollY > 80);
+      setScrolled((current) => {
+        if (current) return window.scrollY > 24;
+        return window.scrollY > 96;
+      });
 
       if (window.location.hash && !isAnchorScrolling.current) {
         window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
