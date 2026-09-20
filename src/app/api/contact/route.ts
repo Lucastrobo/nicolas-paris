@@ -5,7 +5,7 @@ import { z } from "zod";
 const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
-  message: z.string().min(10),
+  message: z.string().optional().default(""),
 });
 
 export async function POST(request: Request) {
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey) {
-    return NextResponse.json({ ok: true, skipped: "RESEND_API_KEY missing" });
+    return NextResponse.json({ error: "RESEND_API_KEY missing" }, { status: 500 });
   }
 
   const resend = new Resend(apiKey);

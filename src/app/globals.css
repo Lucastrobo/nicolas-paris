@@ -137,7 +137,7 @@ textarea {
   display: flex;
   width: max-content;
   animation: marquee 28s linear infinite;
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 .marquee-track span {
@@ -280,19 +280,19 @@ textarea {
   }
 
   .marquee-track {
-    margin-top: 70px;
+    margin-top: 100px;
   }
 
   .home-projects-grid {
     display: flex;
-    gap: 48px;
+    gap: 24px;
     overflow-x: auto;
     padding-bottom: 16px;
     scroll-snap-type: x mandatory;
   }
 
   .project-card {
-    min-width: min(315px, 78vw);
+    min-width: min(286px, 68vw);
     scroll-snap-align: start;
   }
 

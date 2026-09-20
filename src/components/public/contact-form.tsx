@@ -6,20 +6,30 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [message, setMessage] = useState("");
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
+    setMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const response = await fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify(Object.fromEntries(formData)),
       headers: { "Content-Type": "application/json" },
     });
 
-    setStatus(response.ok ? "sent" : "error");
-    if (response.ok) event.currentTarget.reset();
+    if (response.ok) {
+      setStatus("sent");
+      setMessage("Consulta enviada.");
+      form.reset();
+      return;
+    }
+
+    setStatus("error");
+    setMessage("No se pudo enviar. Probá nuevamente.");
   }
 
   return (
@@ -39,8 +49,7 @@ export function ContactForm() {
       <button type="submit" disabled={status === "sending"} className="w-fit bg-white px-4 py-2.5 text-[18px] font-medium leading-[1.2] tracking-[-0.03em] text-black transition-opacity hover:opacity-80 disabled:opacity-50">
         {status === "sending" ? "Enviando" : "Enviar consulta"}
       </button>
-      {status === "sent" ? <p className="text-lg">Consulta enviada.</p> : null}
-      {status === "error" ? <p className="text-lg">No se pudo enviar. Probá nuevamente.</p> : null}
+      {message ? <p className="text-lg">{message}</p> : null}
     </form>
   );
 }

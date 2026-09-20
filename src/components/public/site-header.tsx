@@ -66,6 +66,16 @@ export function SiteHeader() {
     }, 900);
   }
 
+  function handleLogoClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    setMenuOpen(false);
+
+    if (window.location.pathname !== "/") return;
+
+    event.preventDefault();
+    window.history.replaceState(null, "", "/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <>
       <header
@@ -84,7 +94,7 @@ export function SiteHeader() {
           className="site-shell flex items-start justify-between py-16 transition-[padding] duration-300 max-md:items-center max-md:py-7"
           style={scrolled ? { paddingBlock: 28 } : undefined}
         >
-          <Link href="/" aria-label="Nicolas Paris" className="block h-[30px] w-[217px] max-md:w-[170px]">
+          <Link href="/" aria-label="Nicolas Paris" onClick={handleLogoClick} className="block h-[30px] w-[217px] max-md:w-[170px]">
             <img
               src="/images/figma/logo-horizontal.svg"
               alt="Nicolas Paris"
@@ -93,12 +103,7 @@ export function SiteHeader() {
           </Link>
           <nav className="flex gap-10 text-[18px] font-medium leading-[1.2] tracking-[-0.03em] max-lg:gap-6 max-md:hidden">
             {navItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={(event) => handleAnchorClick(event, item.targetId)}
-                className="transition-opacity hover:opacity-55"
-              >
+              <Link key={item.label} href={item.href} onClick={(event) => handleAnchorClick(event, item.targetId)} className="transition-opacity hover:opacity-55">
                 {item.label}
               </Link>
             ))}
@@ -110,7 +115,7 @@ export function SiteHeader() {
             onClick={() => setMenuOpen((value) => !value)}
             className="hidden text-[18px] font-medium leading-[1.2] tracking-[-0.03em] transition-opacity hover:opacity-70 max-md:block"
           >
-            {menuOpen ? "CERRAR" : "MENU"}
+            {menuOpen ? "CERRAR" : "MENÚ"}
           </button>
         </div>
         <nav
