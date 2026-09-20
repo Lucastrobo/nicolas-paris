@@ -285,7 +285,9 @@ textarea {
   .mobile-hero-marquee {
     position: relative;
     display: block;
+    width: min(1120px, calc(100% - 48px));
     height: clamp(190px, 48vw, 240px);
+    margin-inline: auto;
     overflow: hidden;
     color: #f4f4f4;
     font-family: "Freigeist", Arial, sans-serif;

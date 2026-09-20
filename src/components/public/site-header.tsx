@@ -79,7 +79,7 @@ export function SiteHeader() {
   return (
     <>
       <header
-        className="fixed left-0 top-0 z-50 h-[158px] w-full bg-white text-[#181717] transition-[background-color,height,color] duration-300 max-md:h-[86px]"
+        className="sticky left-0 top-0 z-50 h-[158px] w-full bg-white text-[#181717] transition-[background-color,height,color] duration-300 max-md:h-[86px]"
         style={
           scrolled || menuOpen
             ? {
@@ -115,7 +115,7 @@ export function SiteHeader() {
             onClick={() => setMenuOpen((value) => !value)}
             className="hidden text-[18px] font-medium leading-[1.2] tracking-[-0.03em] transition-opacity hover:opacity-70 max-md:block"
           >
-            {menuOpen ? "CERRAR" : "MENÚ"}
+            {menuOpen ? "CERRAR" : "MEN\u00da"}
           </button>
         </div>
         <nav
@@ -134,7 +134,6 @@ export function SiteHeader() {
           </div>
         </nav>
       </header>
-      <div className="h-[158px] max-md:h-[86px]" aria-hidden="true" />
     </>
   );
 }
