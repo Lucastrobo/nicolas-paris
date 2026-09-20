@@ -53,7 +53,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 106px;
-  overflow-x: hidden;
 }
 
 body {
@@ -61,7 +60,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -292,10 +290,12 @@ textarea {
   .mobile-hero-marquee {
     position: relative;
     display: block;
-    width: 100%;
+    left: 50%;
+    width: 100vw;
     height: clamp(190px, 52vw, 240px);
     margin-inline: auto;
-    overflow: visible;
+    overflow: hidden;
+    transform: translateX(-50%);
     color: #f4f4f4;
     font-family: "Freigeist", Arial, sans-serif;
     font-size: clamp(118px, 40vw, 188px);
@@ -307,10 +307,9 @@ textarea {
   .mobile-marquee-window {
     position: absolute;
     inset-block: 0;
-    left: 50%;
-    width: calc(100vw + 96px);
+    left: 0;
+    width: 100%;
     overflow: hidden;
-    transform: translateX(-50%);
   }
 
   .mobile-hero-marquee .marquee-track {
