@@ -20,15 +20,21 @@ const mobileAspectClass = {
 
 export function ProjectMosaic({ images }: { images: ProjectImage[] }) {
   return (
-    <div className="project-mosaic">
-      {images.map((image) => (
-        <ImageWithSkeleton
-          key={image.id}
-          src={image.src}
-          alt={image.alt}
-          className={cn("md:min-h-[480px]", mobileAspectClass[image.span], spanClass[image.span])}
-        />
-      ))}
+    <div className="project-mosaic-container">
+      <div className="project-mosaic">
+        {images.map((image) => (
+          <ImageWithSkeleton
+            key={image.id}
+            src={image.src}
+            alt={image.alt}
+            className={cn(
+              "min-h-0 min-w-0",
+              mobileAspectClass[image.span],
+              spanClass[image.span],
+            )}
+          />
+        ))}
+      </div>
     </div>
   );
 }

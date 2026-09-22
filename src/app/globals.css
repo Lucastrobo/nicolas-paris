@@ -178,10 +178,15 @@ textarea {
   transform-origin: center;
 }
 
+.project-mosaic-container {
+  container-type: inline-size;
+  width: 100%;
+}
+
 .project-mosaic {
   display: grid;
   grid-auto-flow: dense;
-  grid-auto-rows: 480px;
+  grid-auto-rows: calc(100cqw / 3);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
 }
