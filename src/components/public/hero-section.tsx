@@ -9,7 +9,7 @@ type HeroContent = {
 export function HeroSection({ content }: { content: HeroContent }) {
   return (
     <>
-      <section className="relative min-h-[calc(100vh-158px)] overflow-hidden pb-[84px] pt-20 max-md:min-h-0 max-md:overflow-visible max-md:pb-10 max-md:pt-12">
+      <section className="hero-section relative min-h-[calc(100vh-158px)] overflow-hidden pb-[84px] pt-20 max-md:min-h-0 max-md:overflow-visible max-md:pb-10 max-md:pt-12">
         <div className="marquee-bg max-md:hidden" aria-hidden="true">
           <div className="marquee-track">
             <span>{marqueeText}</span>

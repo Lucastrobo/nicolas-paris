@@ -119,14 +119,26 @@ textarea {
   margin-inline: auto;
 }
 
+.hero-section {
+  --marquee-font-size: clamp(150px, 20vw, 340px);
+}
+
+@media (min-width: 901px) {
+  .hero-section {
+    /* Reserve the full animated line and its lower safety padding. */
+    min-height: max(calc(100vh - 158px), calc(443px + var(--marquee-font-size) * 1.2));
+  }
+}
+
 .marquee-bg {
   position: absolute;
-  inset: 398px 0 auto 0;
+  inset: calc(443px - 0.2em) 0 auto 0;
   width: 100%;
   overflow: hidden;
+  padding-block: 0.2em;
   color: #f4f4f4;
   font-family: "Freigeist", Arial, sans-serif;
-  font-size: clamp(150px, 20vw, 340px);
+  font-size: var(--marquee-font-size);
   font-weight: 900;
   line-height: 1;
   white-space: nowrap;
@@ -181,6 +193,10 @@ textarea {
 .project-mosaic-container {
   container-type: inline-size;
   width: 100%;
+}
+
+.marquee-bg .marquee-track {
+  margin-top: 0;
 }
 
 .project-mosaic {
