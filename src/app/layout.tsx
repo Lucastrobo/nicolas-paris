@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SolidCursor } from "@/components/public/solid-cursor";
 import "./globals.css";
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <SolidCursor />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
